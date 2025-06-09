@@ -1,5 +1,6 @@
 package org.kerin.model;
 
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -9,9 +10,10 @@ import lombok.NoArgsConstructor;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class KafkaMessage {
+public class KsError {
 
-    MessageMetadata messageMetadata;
-    MessagePayload messagePayload;
+    String ksErrorCode;
+    String ksErrorTitle;
+    String ksErrorDetails;
 
 }

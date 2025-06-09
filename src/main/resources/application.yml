@@ -1,0 +1,8 @@
+spring:
+  port: 8080
+  servlet:
+    context-path: /ks
+  kafka:
+    bootstrap-servers: localhost:29092
+    producer:
+      ks-error-topic: "ks.error"
