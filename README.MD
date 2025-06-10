@@ -4,7 +4,7 @@
 docker-compose up -d
 
 ### Create a topic
-docker exec -it kafka kafka-topics --create --topic my-topic --bootstrap-server localhost:9092 --partitions 1 --replication-factor 1
+docker exec -it kafka kafka-topics --create --topic ks.error --bootstrap-server localhost:9092 --partitions 1 --replication-factor 1
 
 ### List all topics
 docker exec -it kafka kafka-topics --list --bootstrap-server localhost:9092
