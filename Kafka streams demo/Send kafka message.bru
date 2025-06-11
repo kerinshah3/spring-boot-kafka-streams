@@ -1,0 +1,31 @@
+meta {
+  name: Send kafka message
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://localhost:8080/v1/send-kafka-message
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "messageMetadata": {
+      "requestId": "uuid",
+      "topic": "ks.error"
+    },
+    "messagePayload": {
+      "requestId": "uuid",
+      "isDocument": true,
+      "ksErrorList": [
+        {
+          "ksErrorCode": "SomeCode",
+          "ksErrorTitle": "Some title",
+          "ksErrorDetail": "Some details"
+        }
+      ]
+    }
+  }
+}
